@@ -1,0 +1,19 @@
+{
+  "name": "trivia-laboratoria",
+  "version": "1.0.0",
+  "description": "Proyecto Trivia Laboratoria",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreastefbustos/Trivia-Laboratoria.git"
+  },
+  "author": "Andrea Bustos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreastefbustos/Trivia-Laboratoria/issues"
+  },
+  "homepage": "https://github.com/andreastefbustos/Trivia-Laboratoria#readme"
+}

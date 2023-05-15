@@ -1,0 +1,141 @@
+body{
+    width: 100%;
+    margin: 0;
+    background-color: lightgrey;
+}
+h1{
+    text-align: center;
+    color: purple;
+    background-color: lightcoral;
+    border: 5px dashed;
+    opacity: 70%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+#user{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: whitesmoke;
+    margin: 20px 20px 80px 20px ;
+}
+#userName{
+    border-radius: 0%;
+    height: 30px;
+    width: 200px;
+    opacity: 50%;
+    border: 1px dashed;
+}
+#button-start{
+    text-align: center;
+}
+#button{
+    border: 4px solid purple;
+    border-radius: 30%;
+    background-color: lightcoral;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    color: purple;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 80%;
+}
+#questions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+#welcome{
+    color: darkgreen;
+}
+section{
+    border-radius: 10%;
+    background-color: white;
+    justify-content: center;
+    padding: 10px 10px 10px 10px;
+    margin-top: 30px;
+    min-height: 200px;
+}
+h3{
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+}
+label{
+    display: flex;
+    margin: 10px 10px 10px 10px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#buttons{
+    text-align: right;
+}
+#button-answer{
+    margin-top: 50px;
+    border: 4px green;
+    border-radius: 30%;
+    background-color: linen;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    color: green;
+    padding: 10px;
+    cursor: pointer;
+}
+#button-back{
+    border: 4px;
+    border-radius: 30%;
+    background-color: lightsalmon;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    color: black;
+    padding: 10px;
+    color: darkslategrey;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px
+}
+#results{
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    margin-left: 20px;
+    margin-top: 65px;
+}
+div#center-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+div#container{
+    text-align: center;
+}
+h1#enc-options{
+    color: whitesmoke;
+    margin-bottom: 100px;
+}
+a#option1{
+    border-radius: 30%;
+    background-color: coral;
+    font-size: large;
+    text-decoration: none;
+    padding: 20px;
+    color: whitesmoke;
+    border: 5px solid whitesmoke;
+}
+a#option2{
+    border-radius: 30%;
+    background-color: coral;
+    font-size: large;
+    text-decoration: none;
+    padding: 20px;
+    color: whitesmoke;
+    border: 5px solid whitesmoke;
+}
+
+
