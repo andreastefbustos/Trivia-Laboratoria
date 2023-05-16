@@ -2,7 +2,7 @@
   "name": "trivia-laboratoria",
   "version": "1.0.0",
   "description": "Proyecto Trivia Laboratoria",
-  "main": "index.js",
+  "main": "./HTML/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/andreastefbustos/Trivia-Laboratoria/issues"
   },
-  "homepage": "https://github.com/andreastefbustos/Trivia-Laboratoria#readme"
+  "homepage": "https://github.com/andreastefbustos/Trivia-Laboratoria",
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
