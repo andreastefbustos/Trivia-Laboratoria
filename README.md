@@ -4,7 +4,7 @@ Proyecto Trivia Laboratoria
 # Hito 1
 
 1. Se realizo la elaboración del prototipo
-![bosquejo-Hiito-1](./IMG/hito1.png)
+![bosquejo-Hiito-1](./img/hito1.png)
 
 2. Para hacer la selección de preguntas, decidimimos utilizar la etiqueta `<form>` ya que es un elemento HTML que se utiliza para crear un formulario en una página web. El formulario puede contener uno o más elementos de entrada de formulario, como campos de texto, botones de opción, casillas de verificación, menús desplegables, botones de radio y botones de envío.
 
@@ -41,27 +41,25 @@ Por último, la función muestra el mensaje de alerta utilizando el método aler
 # HITO 2
 
 1. Se realizo la elaboración del prototipo
-![bosquejo hito-2](./IMG/hito2.png)
+![bosquejo hito-2](./img/hito2.png)
 
-2. Se le solicita al usuario que ingrese su nombre y luego lo envía a una página llamada questions.html mediante el método GET.
+2. Se modificaron algunos comportamientos en base al Hito 1 para lograr crear una nueva página de HTML, solicitandole al usurio un nombre, utilizando así la etiqueta `input` -`type= text`.
 
-El formulario contiene un campo de entrada de texto, que permite al usuario escribir su nombre. También tiene una etiqueta label que proporciona una descripción para este campo de entrada.
+3. Luego de ingresar el nombre del usuario este debe aparecer en la segunda vista `Bienvenido [userName]`, para realizar este procedimieto se utilizó `localStorage` que es una funcionalidad de los navegadores, que sirve como una especia de base de datos que nos permite guardar en forma de key, value "llave y valor" datos que necesitemos para nuestra aplicacion.
 
-Por último, hay un botón "Comenzar" que el usuario puede hacer clic para enviar el formulario. Al hacer clic en este botón, se ejecutará una función llamada setName(). La función tiene tres partes:
+4. El botón comenzar se modifico con addEventListener que es un método de JavaScript que se utiliza para registrar un evento en un elemento HTML y asociar una función que se ejecutará cuando el evento ocurra en ese elemento.
 
-* La función utiliza la función getElementById para buscar el elemento HTML con el id "userName". Este elemento es un campo de entrada de texto donde el usuario ingresó su nombre.
+5. En la segunda vista nos encontramos con las preguntas la cual cada una tiene tres opciones que el usurio deberá seleccionar.
 
-* Tiene una declaración if para verificar si el campo de entrada está vacío. Si el campo de entrada está vacío, la función muestra una ventana de alerta para recordar al usuario que debe ingresar su nombre. Si el campo de entrada tiene algún valor, la función continúa.
+6. El código utiliza la función document.querySelector para obtener el valor seleccionado de tres preguntas diferentes en el formulario y almacenarlas en variables.
 
-* Por último, la función utiliza la función localStorage.setItem para almacenar el nombre del usuario en la memoria del navegador. Esto significa que el nombre del usuario se guardará incluso si el usuario cierra el navegador o la página web. El nombre del usuario se guarda bajo la clave "name" en el almacenamiento local del navegador.
+7. Luego, crea tres elementos de párrafo (p1, p2, p3) con la función document.createElement. Estos elementos de párrafo se utilizarán más adelante para mostrar los resultados de las respuestas.
 
-En resumen, esta función se utiliza para verificar que el usuario haya ingresado su nombre en el formulario y luego almacenar ese nombre en el almacenamiento local del navegador.
+8. Utiliza una serie de declaraciones if para verificar si las respuestas a las tres preguntas son correctas o incorrectas. Si una respuesta es correcta, se asigna un mensaje de texto apropiado al elemento de párrafo correspondiente. Si una respuesta es incorrecta, se asigna un mensaje de texto diferente al elemento de párrafo correspondiente.
 
-3. Se despliega la siguiente pantalla con las 3 preguntas y sus respectivas 3 opciones.
+9. Finalmente, utiliza la función appendChild para agregar los elementos de párrafo al elemento con el id results. Este elemento es donde se mostrarán los mensajes de texto sobre las respuestas correctas e incorrectas.
 
-4. Se realizan las validaciones correspondientes, para saber si las respuestas seleccionadas por el usurio son correcta o incorrectas, se trabajo con condicionales para dicha validación `if .... else`. 
-
-5. Para que estas respuestas aparecieran en el HTML se utilizó `createElement` que es una función de JavaScript que se utiliza para crear un nuevo elemento HTML en una página web. La función createElement toma un argumento que especifica el tipo de elemento que se desea crear, como "div", "p", "img", "input", entre otros. Así utilizando el `appendChild` para agregar el elemento ya creado en sus respectivos párrafos.
+En resumen, este código toma las respuestas seleccionadas por el usuario en un formulario, verifica si son correctas o incorrectas, y luego muestra mensajes de texto correspondientes para cada respuesta en la página web.
 ### Hito 2 Soporte Link
 
 [button y sus elementos](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
@@ -71,5 +69,21 @@ En resumen, esta función se utiliza para verificar que el usuario haya ingresad
 [explicación del appendChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
 
 [creando un nuevo elemento en HTML](https://www.w3schools.com/js/js_htmldom_nodes.asp#:~:text=To%20add%20text%20to%20the,is%20a%20new%20paragraph.%22)%3B)
+
+# HITO 3
+
+1. Se realizo la elaboración del prototipo
+![bosquejo hito-2](./img/hito3.png)
+
+2. Se agregó otra vista de HTML donde aparecen las dos tipos de preguntas, para ser seleccionadas por el usuario. 
+
+# HITO 4.
+
+1. Para agregar el temporizador a las pegruntas, se realizó el siguiente procedimiento:
+* Se agregó un div en el HTML (questions.html-questions2.html) que se posicionará por encima de div "questions" para mantener la estructura del documento y evitar problemas de visualización.
+* Dentro del div del temporizador, se agrega un elemento `<span>` para poder actualizar dinámicamente el contenido del temporizador usando JavaScript. Este span actúa como un marcador de posición en el HTML para mostrar el tiempo restante del temporizador.
+* Luego se procede a utilizar la función setInterval, esta nos permite ejecutar una función repetidamente, comenzando después del intervalo de tiempo, luego repitiéndose continuamente cada intervalo.
+* La función isAnswerSelected() se utiliza para verificar si el jugador ha seleccionado alguna respuesta en cada una de las preguntas de la trivia. Retorna el resultado de la verificación como un valor booleano (true o false). Dentro de la función isAnswerSelected(), se utiliza querySelector() para obtener el elemento HTML que representa la opción seleccionada de cada pregunta. Si al menos una opción ha sido seleccionada para cualquiera de las tres preguntas, se retornará true, lo que indica que se ha seleccionado una respuesta. Si ninguna opción ha sido seleccionada en ninguna de las preguntas, se retornará false, indicando que no se ha seleccionado ninguna respuesta. La función isAnswerSelected() es utilizada en el código para realizar algunas verificaciones, como en el caso de mostrar una alerta si el tiempo se agota y no se ha seleccionado ninguna respuesta. También se puede utilizar para validar si el jugador ha respondido todas las preguntas antes de mostrar los resultados finales. En resumen, la función isAnswerSelected() es necesaria para verificar si se han seleccionado respuestas en el juego de trivia y realizar acciones en consecuencia, como mostrar mensajes o realizar validaciones.
+
 
 

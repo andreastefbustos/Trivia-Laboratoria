@@ -17,20 +17,25 @@ let p4 = document.createElement("p")
 
 let total = 0;
 
+//variable para almacenar el ID del temporizador
+let countdown;
+
+//variable para controlar si el tiempo se agoto
+let timeExpired = false;
+
 function answer(){
-    
-    let questionOne = document.querySelector('input[name = "answer1"]:checked')
-    let questionTwo = document.querySelector('input[name = "answer2"]:checked')
-    let questionThree = document.querySelector('input[name = "answer3"]:checked')
+    let questionOne = document.querySelector('input[name = "answer1"]:checked');
+    let questionTwo = document.querySelector('input[name = "answer2"]:checked');
+    let questionThree = document.querySelector('input[name = "answer3"]:checked');
+
+    if (questionOne == undefined || questionTwo == undefined || questionThree == undefined){
+        alert("El usuario olvido seleccionar algunas preguntas");
+        // este return se acaba la funcion 
+        return;
+    }
 
     let message = `Seleccionaste las opciones: ${questionOne.value}, ${questionTwo.value} y ${questionThree.value}`;
     alert(message);
-
-    // if (questionOne == undefined || questionTwo == undefined || questionThree == undefined){
-    //     alert("El usuario olvido seleccionar algunas preguntas");
-    //     // este return se acaba la funcion 
-    //     return;
-    // }
 
     if (questionOne.value == answerOne){
         p1.textContent = "La respuesta de la pregunta 1 es correcta"
@@ -61,4 +66,39 @@ function answer(){
     results.appendChild(p3);
 
     results.appendChild(document.createTextNode(`Tu total fue ${total}`));
+
+    //detiene el temporizador
+    clearInterval(countdown);
 }
+
+// Temporizador
+let secondsLeft = 30; // Duración del temporizador en segundos
+let countdownElement = document.getElementById("countdown");
+
+function isAnswerSelected(){
+    let questionOne = document.querySelector('input[name = "answer1"]:checked');
+    let questionTwo = document.querySelector('input[name = "answer2"]:checked');
+    let questionThree = document.querySelector('input[name = "answer3"]:checked');
+
+    return questionOne || questionTwo || questionThree;
+}
+
+function startTimer() {
+    countdown = setInterval(function () {
+        secondsLeft--;
+        countdownElement.innerText = secondsLeft;
+
+        if (secondsLeft <= 0) {
+            clearInterval(countdown);
+            timeExpired = true;
+            if(!isAnswerSelected()){
+                alert("Perdiste. Se acabó tu tiempo.");
+                return;
+            }
+            answer(); // Llama a la función answer() cuando se agote el tiempo
+        }
+    }, 1000); // Intervalo de actualización del temporizador en milisegundos (1000ms = 1 segundo)
+}
+
+// Llamar a la función startTimer() cuando quieras iniciar el temporizador, por ejemplo, al cargar la página o al mostrar una nueva pregunta
+startTimer();

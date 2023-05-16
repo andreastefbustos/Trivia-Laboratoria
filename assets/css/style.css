@@ -137,5 +137,24 @@ a#option2{
     color: whitesmoke;
     border: 5px solid whitesmoke;
 }
+#timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#countdown {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    color: green;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid green;
+    border-radius: 50%;
+    background-color: lavender;
+}
 
 
